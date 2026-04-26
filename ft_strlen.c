@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 17:49:31 by andmigue          #+#    #+#             */
-/*   Updated: 2026/04/16 17:57:14 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/04/25 02:38:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int main(void)
+/*int main(void)
 {
 	char *s = "ola";
 	printf("%d\n", ft_strlen(s));
-}
+}/*
