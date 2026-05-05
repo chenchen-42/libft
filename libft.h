@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 16:51:37 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/04 22:21:50 by marvin           ###   ########.fr       */
+/*   Updated: 2026/05/05 20:44:47 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <string.h>
+
 
 int  ft_isalpha(int c);
 int	 ft_isdigit(int c);
@@ -38,6 +40,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 size_t ft_strlcpy(char *dst, const char *src, size_t size);
 size_t ft_strlcat(char *dst, const char *src, size_t size);
+void *ft_calloc(size_t nmemb, size_t size);
+char *ft_strdup(const char *s);
+char *ft_strjoin(char const *s1, char const *s2);
 
 
 #endif 

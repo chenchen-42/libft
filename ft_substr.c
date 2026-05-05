@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/16 17:49:31 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/05 17:12:56 by andmigue         ###   ########.fr       */
+/*   Created: 2026/05/05 18:55:14 by andmigue          #+#    #+#             */
+/*   Updated: 2026/05/05 19:59:29 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int i;
+	char *str;
+	size_t i;
+	size_t slen;
+	
 	i = 0;
-	while(s[i])
+	if(!s)
+		return (NULL);
+	slen = ft_strlen(s);
+	if(slen < start)
+		return (ft_strdup(""));
+	if (len > slen - start)
+    	len = slen - start;
+	str = malloc(sizeof(char) * (len + 1));
+	if(!str)
+		return (NULL);
+	while(i < len)
 	{
-		i++;	
+		str[i] = s[start + i];
+		i++;
 	}
-	return (i);
+	str[i] = '\0';
+	return(str);
 }
-
-/*int main(void)
-{
-	char *s = "ola";
-	printf("%d\n", ft_strlen(s));
-}*/

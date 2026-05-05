@@ -3,7 +3,8 @@
 
 int main(void)
 {
-    printf("%d\n", ft_isalpha('1'));
-    return 0;
+	char str[] = "ola";
+    char *arr = ft_strdup(str);
+    printf("basic:      '%s'\n", arr);
+    free(arr);
 }
-

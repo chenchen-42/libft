@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/16 17:49:31 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/05 17:12:56 by andmigue         ###   ########.fr       */
+/*   Created: 2026/05/05 16:09:42 by andmigue          #+#    #+#             */
+/*   Updated: 2026/05/05 20:42:34 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	int i;
-	i = 0;
-	while(s[i])
-	{
-		i++;	
-	}
-	return (i);
+    void *ptr;
+
+    if (nmemb != 0 && size > 2147483647 /*64745898548956*/ / nmemb)
+        return (NULL);
+    ptr = malloc(nmemb * size);
+    if (ptr == NULL)
+        return (NULL);
+    ft_memset(ptr, 0, nmemb * size);
+    return (ptr);
 }
 
-/*int main(void)
+/* int main(void)
 {
-	char *s = "ola";
-	printf("%d\n", ft_strlen(s));
-}*/
+	size_t nmemb = 2; 
+	size_t size = 1;
+	printf("%p", ft_calloc(nmemb,size));
+} */
