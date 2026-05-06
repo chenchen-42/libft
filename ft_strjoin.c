@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 19:56:08 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/05 21:08:52 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/06 15:46:20 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,17 @@ char *ft_strjoin(char const *s1, char const *s2)
 	str = malloc(sizeof(char) * (len + 1));
 	if(!str)
 		return (NULL);
-	ft_memcpy(str, s1, lens1);
-	ft_memcpy(&str[lens1], s2, len - lens1);
-	str[len + 1] = '\0';
+	ft_strlcpy(str, s1, len + 1);
+	ft_strlcat(str, s2, len + 1);
 	return (str);
 }
 
 int main(void)
 {
 	
-	char const *s1 = "olaaasdads";
+	char const *s1 = "ola";
 	char const *s2 = " andre";
-	char *result = ft_strjoin(s1, s2);
-	
-	while(1)
-		printf("%s\n", result);
+	char *result = ft_strjoin(s1, s2);	
+	printf("%s\n", result);
 	free(result);
 }
