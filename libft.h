@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 16:51:37 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/06 17:16:00 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/09 13:22:00 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,11 @@ char *ft_strdup(const char *s);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_itoa(int n);
 char *ft_strtrim(char const *s1, char const *set);
+char *ft_strmapi(char const *s, char (*f)(unsigned
+int, char));
+void ft_striteri(char *s, void (*f)(unsigned int,
+char*));
+
 
 
 #endif 

@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 17:03:24 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/06 17:39:57 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/09 12:55:17 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ char *ft_strtrim(char const *s1, char const *set)
 	return(newstring);
 }
 
-int main(void)
-{
-	char *s1 = ft_strtrim("oaoaoaoaola tudo bem?oaoao", "oa");
-	printf("%s", s1);
-}
+// int main(void)
+// {
+// 	char *s1 = ft_strtrim("oaoaoaoaola tudo bem?oaoao", "oa");
+// 	printf("%s", s1);
+// }
