@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 18:55:14 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/11 17:39:37 by andmigue         ###   ########.fr       */
+/*   Created: 2026/05/11 19:18:50 by andmigue          #+#    #+#             */
+/*   Updated: 2026/05/11 19:35:56 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+void ft_putnbr_fd(int n, int fd)
 {
-	char *str;
-	size_t i;
-	size_t slen;
-	
-	i = 0;
-	if(!s)
-		return (NULL);
-	slen = ft_strlen(s);
-	if(slen < start)
-		return (ft_strdup(""));
-	if (len > slen - start)
-		len = slen - start;
-	str = malloc(sizeof(char) * (len + 1));
-	if(!str)
-		return (NULL);
-	while(i < len)
+	long nbr;
+	char c;
+
+	nbr = n;
+	if (nbr < 0)
 	{
-		str[i] = s[start + i];
-		i++;
+		write(fd, "-", 1);
+		nbr = -nbr;
 	}
-	str[i] = '\0';
-	return(str);
+	if (nbr > 9)
+	{
+		ft_putnbr_fd(nbr / 10, fd);
+	}
+	c = (nbr % 10) + '0';
+	write(fd, &c, 1);
 }
+// int main(void)
+// {
+// 	int n = 1234;
+// 	ft_putnbr_fd(n, 1);
+// }

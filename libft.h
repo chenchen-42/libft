@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 16:51:37 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/10 22:41:39 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/11 19:21:15 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,10 @@ int, char));
 void ft_striteri(char *s, void (*f)(unsigned int,
 char*));
 void ft_putchar_fd(char c, int fd);
-
+char **ft_split(char const *s, char c);
+void ft_putstr_fd(char *s, int fd);
+void ft_putendl_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
 
 
 #endif 
