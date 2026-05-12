@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/16 17:49:31 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/12 20:05:41 by andmigue         ###   ########.fr       */
+/*   Created: 2026/05/12 18:20:09 by andmigue          #+#    #+#             */
+/*   Updated: 2026/05/12 18:45:04 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int ft_lstsize(t_list *lst)
 {
-	size_t i;
+	int i;
+
 	i = 0;
-	while(s[i])
+	while(lst != NULL)
 	{
-		i++;	
+		lst = lst->next;
+		i++;
 	}
 	return (i);
 }
 
-/* int main(void)
-{
-	char *s = "ola";
-	printf("%d\n", ft_strlen(s));
-} */
+// int main(void)
+// {
+//     t_list *lst;
+// 	t_list *lst1;
+// 	t_list *lst2;
+	
+//     lst = ft_lstnew("ola");
+// 	lst1 = ft_lstnew("olaa");
+// 	lst2 = ft_lstnew("olaaa");
+// 	lst->next = lst1;
+// 	lst1->next = lst2;
+//     printf("%d\n", ft_lstsize(lst));
+//     return (0);
+// }

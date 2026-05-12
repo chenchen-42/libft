@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/16 17:49:31 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/12 20:05:41 by andmigue         ###   ########.fr       */
+/*   Created: 2026/05/12 15:57:34 by andmigue          #+#    #+#             */
+/*   Updated: 2026/05/12 16:06:31 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list *ft_lstnew(void *content)
 {
-	size_t i;
-	i = 0;
-	while(s[i])
-	{
-		i++;	
-	}
-	return (i);
-}
+	t_list *node;
 
-/* int main(void)
-{
-	char *s = "ola";
-	printf("%d\n", ft_strlen(s));
-} */
+	node = malloc(sizeof (t_list));
+	if(!node)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
+}

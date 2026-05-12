@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:46:30 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/06 17:02:08 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/12 16:34:28 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ char *ft_itoa(int n)
     return(result);
 }
 
-int main (void)
-{
-    long nb = 534;
-    long nb1 = -2147483648;
-    printf("%s\n", ft_itoa(nb));
-    printf("%s\n", ft_itoa(nb1));
-}
+// int main (void)
+// {
+//     long nb = 534;
+//     long nb1 = -2147483648;
+//     printf("%s\n", ft_itoa(nb));
+//     printf("%s\n", ft_itoa(nb1));
+// }

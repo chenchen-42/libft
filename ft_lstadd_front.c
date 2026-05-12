@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/16 17:49:31 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/12 20:05:41 by andmigue         ###   ########.fr       */
+/*   Created: 2026/05/12 16:05:08 by andmigue          #+#    #+#             */
+/*   Updated: 2026/05/12 16:24:10 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t i;
-	i = 0;
-	while(s[i])
-	{
-		i++;	
-	}
-	return (i);
+	if(!lst || !new)
+		return;
+	new->next = *lst;
+	*lst = new;
 }
 
-/* int main(void)
-{
-	char *s = "ola";
-	printf("%d\n", ft_strlen(s));
-} */
+// int main(void)
+// {
+//     t_list *lst;
+//     t_list *node;
+
+//     lst = ft_lstnew("second");
+//     node = ft_lstnew("first");
+//     ft_lstadd_front(&lst, node);
+//     while(lst)
+//     {
+//         printf("%s\n", (char *)lst->content);
+//         lst = lst->next;
+//     }
+//     return (0);
+// }

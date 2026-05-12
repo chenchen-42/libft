@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:12:10 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/06 17:58:46 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/12 20:14:08 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,14 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
+int main(void)
+{
+	char a = 'a';
+	printf("My own: %d\n", ft_isalnum(a));
+	printf("Original: %d\n", isalnum(a));
+	return (0);
+
+}
 /*int main (int ac, char **av)
 {
 	// if(ac != 1)
