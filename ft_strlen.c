@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 17:49:31 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/12 20:05:41 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/13 06:00:31 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
+
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
-		i++;	
+		i++;
 	}
 	return (i);
 }

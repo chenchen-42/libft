@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:09:29 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/12 19:17:22 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/13 08:02:44 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@
 //     free(content);
 // }
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if(!lst || !del)
-		return;
-	del(lst->content);
-	free(lst);
+	if (!lst || !del)
+		return ;
+	del (lst->content);
+	free (lst);
 }
-
 
 // int main(void)
 // {

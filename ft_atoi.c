@@ -12,15 +12,14 @@
 
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-    int result;
-    int sign;
+	int	result;
+	int	sign;
 
-    result = 0;
-    sign = 1;
-
-    while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
+	result = 0;
+	sign = 1;
+	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
 		nptr++;
 	if (*nptr == '+' || *nptr == '-')
 	{
@@ -36,10 +35,10 @@ int ft_atoi(const char *nptr)
 	return (result * sign);
 }
 
-int main(void)
+/* int main(void)
 {
-    const char *nptr = "11111111111111111111";
-    printf("My own %d\n", ft_atoi(nptr));
+	const char *nptr = "11111111111111111111";
+	printf("My own %d\n", ft_atoi(nptr));
 	printf("%d\n", atoi(nptr));
 	return (0);
-}
+} */

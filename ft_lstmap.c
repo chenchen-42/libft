@@ -6,26 +6,26 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:40:02 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/12 20:01:06 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/13 08:02:30 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *list;
-	void *content;
-	t_list *node;
-	
-	if(!lst || !f || !del)
+	t_list	*list;
+	void	*content;
+	t_list	*node;
+
+	if (!lst || !f || !del)
 		return (NULL);
 	list = NULL;
-	while(lst != NULL)
+	while (lst != NULL)
 	{
 		content = f(lst->content);
 		node = ft_lstnew(content);
-		if(node == NULL)
+		if (node == NULL)
 		{
 			ft_lstclear(&list, del);
 			return (NULL);
@@ -35,7 +35,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (list);
 }
-int main(void)
+/* int main(void)
 {
     t_list *lst;
     t_list *lst1;
@@ -51,4 +51,4 @@ int main(void)
     lst1->next = NULL;
     printf("after: %d\n", ft_lstsize(lst));
     return (0);
-}
+} */

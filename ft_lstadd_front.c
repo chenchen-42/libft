@@ -6,16 +6,16 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 16:05:08 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/12 16:24:10 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/13 07:42:28 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if(!lst || !new)
-		return;
+	if (!lst || !new)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

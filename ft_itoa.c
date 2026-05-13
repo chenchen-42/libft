@@ -6,58 +6,58 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 15:46:30 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/12 16:34:28 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/13 08:02:36 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int intlen(long n)
+static int	intlen(long n)
 {
-    int count;
-    
-    count = 0;
-    if(n == 0)
-        count++;
-    if(n < 0)
-    {
-        count++;
-        n = -n;
-    }
-    while(n > 0)
-    {
-        n = n / 10;
-        count++;
-    }
-    return(count);
+	int	count;
+
+	count = 0;
+	if (n == 0)
+		count++;
+	if (n < 0)
+	{
+		count++;
+		n = -n;
+	}
+	while (n > 0)
+	{
+		n = n / 10;
+		count++;
+	}
+	return (count);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    long nb;
-    int size;
-    char *result;
-    
-    nb = n;
-    size = intlen(nb);
-    result = malloc(sizeof(char) * (size + 1));
-    if(!result)
-        return(NULL);
-    result[size] = '\0';
-    if(nb < 0)
-    {
-        result[0] = '-';
-        nb = -nb;
-    }
-    if(nb == 0)
-        result[0] = '0';
-    while(nb > 0)
-    {
-        size--;
-        result[size] = (nb % 10) + 48;
-        nb = nb / 10;
-    }
-    return(result);
+	long	nb;
+	int		size;
+	char	*result;
+
+	nb = n;
+	size = intlen(nb);
+	result = malloc(sizeof(char) * (size + 1));
+	if (!result)
+		return (NULL);
+	result[size] = '\0';
+	if (nb < 0)
+	{
+		result[0] = '-';
+		nb = -nb;
+	}
+	if (nb == 0)
+		result[0] = '0';
+	while (nb > 0)
+	{
+		size--;
+		result[size] = (nb % 10) + 48;
+		nb = nb / 10;
+	}
+	return (result);
 }
 
 // int main (void)
