@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:40:02 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/13 08:02:30 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/15 11:06:29 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		node = ft_lstnew(content);
 		if (node == NULL)
 		{
+			del (content);
 			ft_lstclear(&list, del);
 			return (NULL);
 		}
