@@ -36,3 +36,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+// int main(void)
+// {
+// 	char dest[100] = "123456789";
+// 	ft_memmove(dest + 2, dest, 5);
+// 	printf("%s", dest);
+// }

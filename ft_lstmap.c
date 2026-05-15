@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:40:02 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/15 11:06:29 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/15 14:00:00 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,38 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (list);
 }
-/* int main(void)
-{
-    t_list *lst;
-    t_list *lst1;
-    t_list *lst2;
+// void *to_upper(void *content)
+// {
+//     char *str;
+//     int i;
 
-    lst = ft_lstnew("ola");
-    lst1 = ft_lstnew("olaa");
-    lst2 = ft_lstnew("olaaa");
-    lst->next = lst1;
-    lst1->next = lst2;
-    printf("before: %d\n", ft_lstsize(lst));
-    ft_lstdelone(lst2, del);
-    lst1->next = NULL;
-    printf("after: %d\n", ft_lstsize(lst));
-    return (0);
-} */
+//     i = 0;
+//     str = ft_strdup((char *)content);
+//     while (str[i])
+//     {
+//         str[i] = str[i] - 32;
+//         i++;
+//     }
+//     return (str);
+// }
+// void del(void *content)
+//  {
+//      free(content);
+// }
+
+// int main(void)
+// {
+//     t_list *lst;
+//     t_list *result;
+
+//     lst = ft_lstnew(ft_strdup("ola"));
+//     lst->next = ft_lstnew(ft_strdup("olaa"));
+//     lst->next->next = ft_lstnew(ft_strdup("olaaa"));
+//     result = ft_lstmap(lst, to_upper, del);
+//     while (result)
+//     {
+//         printf("%s\n", (char *)result->content);
+//         result = result->next;
+//     }
+//     return (0);
+// }
