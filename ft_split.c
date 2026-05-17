@@ -58,25 +58,25 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	int		i;
 	int		j;
-	int		len;
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
 	result = malloc(sizeof (char *) * (count_words (s, c) + 1));
-	if (!s || !result)
+	if (!result)
 		return (NULL);
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		len = count_letter(&s[i], c);
 		if (!s[i])
 			break ;
-		result[j] = ft_substr(s, i, len);
+		result[j] = ft_substr(s, i, count_letter(&s[i], c));
 		if (!result[j])
 			return (ft_free(result, j), NULL);
-		i = i + count_letter(&s[i], c);
 		j++;
+		i = i + count_letter(&s[i], c);
 	}
 	result[j] = NULL;
 	return (result);
