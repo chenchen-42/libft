@@ -6,7 +6,7 @@
 /*   By: andmigue <andmigue@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 16:09:42 by andmigue          #+#    #+#             */
-/*   Updated: 2026/05/15 12:04:58 by andmigue         ###   ########.fr       */
+/*   Updated: 2026/05/18 08:00:08 by andmigue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (nmemb == 0 || size == 0)
-    	return (NULL);
 	if (nmemb != 0 && size > SIZE_MAX / nmemb)
 		return (NULL);
 	ptr = malloc(nmemb * size);
